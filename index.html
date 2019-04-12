@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="cabecera">
+            <img src="logoexa.png" alt="" style="width:100px;float:left">
+            <h1>Sistema De Ventas - Exa01</h1>
+            <hr>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a onclick="mostrarInicio()">Inicio</a>
+                    <a onclick="mostrarVentas()">ventas</a>
+                    <a onclick="mostrarReportes()">Reportes</a>
+                    <a onclick="mostrarClientes()">Clientes</a>
+                    <a onclick="mostrarProductos()">Productos</a>
+                </li>
+            </ul>
+        </nav>
+        <aside style="display: block;" id="inicio">
+            <h1>Bienvenido al Sistema de Ventas</h1>
+
+        </aside>
+        <aside style="display: none;text-align: left" id="ventas">
+            <h1  style="text-align:left;padding:15px;">ventas</h1>
+            <hr>
+            <label for="">Cliente</label>
+            <input type="text" placeholder="Cliente..." id="Cliente"> <button onclick="mostrarCliente()"><img src="buscar.png" alt=""></button><br>
+            <button><img src="carrito.png" alt=""> Producto</button><br>
+
+            <input type="text" placeholder="Producto...">
+            <input type="text" placeholder="Precio...">
+            <input type="text" placeholder="Cantidad..."><br>
+            <button>Enviar</button>
+        </aside>
+        <aside style="display: none;" id="reportes">
+            <h2 style="text-align:left;padding:15px;">REPORTES</h2>
+            <hr>
+            <table class="customers"  >
+                <tr>
+                    <th>Venta</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th>Accion</th>
+                </tr>
+                <tr>
+                    <td>V001</td>
+                    <td>Mouse</td>
+                    <td>25</td>
+                    <td>10</td>
+                    <td>250</td>
+                    <td><img src="d.png" alt=""></td>
+                </tr>
+                <tr>
+                    <td>V002</td>
+                    <td>Mouse</td>
+                    <td>25</td>
+                    <td>10</td>
+                    <td>250</td>
+                    <td><img src="d.png" alt=""></td>
+                </tr>
+                <tr>
+                    <td>V003</td>
+                    <td>Mouse</td>
+                    <td>25</td>
+                    <td>10</td>
+                    <td>250</td>
+                    <td><img src="d.png" alt=""></td>
+                </tr>
+                <tr>
+                    <td>V004</td>
+                    <td>Mouse</td>
+                    <td>25</td>
+                    <td>10</td>
+                    <td>250</td>
+                    <td><img src="d.png" alt=""></td>
+                </tr>
+            </table>
+        </aside>
+        <aside style="display: none;" id="clientes">
+            <h2 style="text-align:left;padding:15px;">Clientes</h2>
+            <hr>
+            <table class="customers"  id="tablitaClientes">
+                <tr>
+                    <th>Codigo</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Dni</th>
+                    <th>Accion</th>
+
+                </tr>
+                <tr>
+                    <td>C001</td>
+                    <td>David</td>
+                    <td>Reyna</td>
+                    <td>33565412</td>
+                    <td ><img src="usuario.png" alt="" onclick="guardarCliente(p)"></td>
+                </tr>
+                <tr>
+                    <td>C002</td>
+                    <td>David</td>
+                    <td>Reyna</td>
+                    <td>33565412</td>
+                    <td ><img src="usuario.png" alt="" onclick="guardarCliente()"></td>
+                </tr>
+                <tr>
+                    <td>C003</td>
+                    <td>David</td>
+                    <td>Reyna</td>
+                    <td>33565412</td>
+                    <td ><img src="usuario.png" alt="" onclick="guardarCliente()"></td>
+                </tr>
+                <tr>
+                    <td>C004</td>
+                    <td>David</td>
+                    <td>Reyna</td>
+                    <td>33565412</td>
+                    <td ><img src="usuario.png" alt="" onclick="guardarCliente()"></td>
+                </tr>
+            </table>
+        </aside>
+        <aside style="display: none;" id="productos">
+            <h2 style="text-align:left;padding:15px;">Productos</h2>
+            <hr>
+            <table class="customers" >
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Stock</th>
+                    <th>Accion</th>
+
+                </tr>
+                <tr>
+                    <td>P001</td>
+                    <td>Mouse</td>
+                    <td>25</td>
+                    <td>20</td>
+                    <td><img src="carrito.png" alt=""></td>
+                </tr>
+                <tr>
+                   <td>P001</td>
+                    <td>Mouse</td>
+                    <td>25</td>
+                    <td>20</td>
+                    <td><img src="carrito.png" alt=""></td>
+                </tr>
+                <tr>
+                        <td>P001</td>
+                        <td>Mouse</td>
+                        <td>25</td>
+                        <td>20</td>
+                        <td><img src="carrito.png" alt=""></td>
+                </tr>
+                <tr>
+                        <td>P001</td>
+                        <td>Mouse</td>
+                        <td>25</td>
+                        <td>20</td>
+                        <td><img src="carrito.png" alt=""></td>
+                </tr>
+            </table>
+        </aside>
+        <script src="js.js"></script>
+</body>
+
+</html>
